@@ -173,7 +173,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/tv_title1"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FFFC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="36dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="30dp">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="44dp"
+            android:src="@drawable/thirtyuplogo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="개인 정보"
+                android:textColor="#699D77"
+                android:textSize="11dp" />
+
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="아이디 (이메일 형식)"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="21dp"
+                android:textColorHint="#699D77"
+                android:textSize="11dp" />
+
+            <EditText
+                android:id="@+id/et_pw"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:paddingLeft="21dp"
+                android:textColorHint="#699D77"
+                android:textSize="11dp" />
+
+            <EditText
+                android:id="@+id/et_pw_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="비밀번호 확인"
+                android:inputType="textPassword"
+                android:paddingLeft="21dp"
+                android:textColorHint="#699D77"
+                android:textSize="11dp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="연락처"
+                android:inputType="phone"
+                android:paddingLeft="21dp"
+                android:textColorHint="#699D77"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:background="#707070" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="사업 정보"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#699D77"
+                android:textSize="11dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_business"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:hint="상호명"
+                    android:inputType="text"
+                    android:paddingLeft="21dp"
+                    android:textColorHint="#699D77"
+                    android:textSize="11dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="470dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_registration"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="사업자 등록번호"
+                android:inputType="phone"
+                android:paddingLeft="21dp"
+                android:textColorHint="#699D77"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="#86B994"
+            android:gravity="center"
+            android:text="가입 완료"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

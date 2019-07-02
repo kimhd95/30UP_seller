@@ -1,39 +1,43 @@
 package com.openhack.market30;
 
-        import android.app.Activity;
-        import android.content.Intent;
-        import android.support.v7.app.AlertDialog;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.TextView;
+import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
-        import com.android.volley.RequestQueue;
-        import com.android.volley.Response;
-        import com.android.volley.toolbox.Volley;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 
-        import org.json.JSONObject;
+import org.json.JSONObject;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-
-public class LoginActivity extends Activity {
-    private AlertDialog dialog;
-    public static String login_id, login_pwd;
+public class SignUp extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
 
-        login_id = null;
-        login_pwd = null;
+        EditText id = (EditText)findViewById(R.id.et_id);
+        EditText pw = (EditText)findViewById(R.id.et_pw);
+        EditText pw_confirm = (EditText)findViewById(R.id.et_pw_confirm);
+        EditText phone = (EditText)findViewById(R.id.et_phone);
+        EditText business = (EditText)findViewById(R.id.et_business);
+        EditText registration = (EditText)findViewById(R.id.et_registration);
+        Button submitBtn = (Button)findViewById(R.id.btn_submit);
+        ImageButton searchBtn = (ImageButton)findViewById(R.id.btn_search);
 
-        final EditText id_txt = (EditText) findViewById(R.id.id_txt);
-        final EditText pwd_txt = (EditText) findViewById(R.id.pwd_txt);
-        final Button login_btn = (Button) findViewById(R.id.login_btn);
-        TextView forget = (TextView) findViewById(R.id.forget_btn);
-        TextView signUp = (TextView) findViewById(R.id.signup_btn);
 //        login_btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -88,28 +92,20 @@ public class LoginActivity extends Activity {
 //                queue.add(login_request);
 //            }
 //        });
-        // 로그인
-        login_btn.setOnClickListener(new View.OnClickListener(){
-          @Override
-          public void onClick (View view){
-              Intent intent = new Intent(LoginActivity.this, BarcodeScan.class);
-              LoginActivity.this.startActivity(intent);
-          }
-        });
-        // 회원가입
-        signUp.setOnClickListener(new View.OnClickListener(){
+        // 검색
+        searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View view){
-                Intent intent = new Intent(LoginActivity.this, SignUp.class);
-                LoginActivity.this.startActivity(intent);
+            public void onClick(View view) {
+//                Intent intent = new Intent(SignUp.this, BarcodeScan.class);
+//                SignUp.this.startActivity(intent);
             }
         });
-        // 비밀번호찾기
-        forget.setOnClickListener(new View.OnClickListener(){
+        // 가입완료
+        submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View view){
-                Intent intent = new Intent(LoginActivity.this, UserInformation.class);
-                LoginActivity.this.startActivity(intent);
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUp.this, LoginActivity.class);
+                SignUp.this.startActivity(intent);
             }
         });
     }
