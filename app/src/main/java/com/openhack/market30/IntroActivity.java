@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -23,7 +26,13 @@ public class IntroActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((new Random()).nextBoolean() ? R.layout.activity_seller_intro : R.layout.activity_user_intro); // xml과 java소스를 연결
+        setContentView(R.layout.activity_seller_intro);
+
+        TextView comment = (TextView)findViewById(R.id.tv_comment);
+        String[] comments = {"아끼다 똥된다.", "먼저 올리는 놈이 승자다. 떠리UP"};
+        String pick = comments[(int)(Math.random() * comments.length)];
+        comment.setText(pick);
+
     } // end of onCreate
 
     @Override
