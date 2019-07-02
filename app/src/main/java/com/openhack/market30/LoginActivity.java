@@ -88,19 +88,29 @@ public class LoginActivity extends Activity {
 //                queue.add(login_request);
 //            }
 //        });
-        signUp.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent register_intent = new Intent(LoginActivity.this, UserInformation.class);
-                LoginActivity.this.startActivity(register_intent);
-            }
-        });
+        // 로그인
         login_btn.setOnClickListener(new View.OnClickListener(){
           @Override
           public void onClick (View view){
-              Intent Main_intent = new Intent(LoginActivity.this, MainActivity.class);
-              LoginActivity.this.startActivity(Main_intent);
+              Intent intent = new Intent(LoginActivity.this, BarcodeScan.class);
+              LoginActivity.this.startActivity(intent);
           }
+        });
+        // 회원가입
+        signUp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent intent = new Intent(LoginActivity.this, UserInformation.class);
+                LoginActivity.this.startActivity(intent);
+            }
+        });
+        // 비밀번호찾기
+        forget.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent intent = new Intent(LoginActivity.this, UserInformation.class);
+                LoginActivity.this.startActivity(intent);
+            }
         });
     }
     }
